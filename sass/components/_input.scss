@@ -1,0 +1,105 @@
+@import "../base/color";
+@import "../base/font";
+
+// html: 一般文字輸入框
+// <input type="text" value="123" placeholder="請輸入帳號" id="username" class="unified_input">
+// <input type="password" value="123" placeholder="請輸入密碼" id="username" class="unified_input">
+.unified_input {
+  padding: 8px 8px;
+  appearance: none;
+  outline: none;
+  border-radius: 32px;
+  background-color: $white;
+  border: 2px solid $primary;
+  font-size: $fontbase-14;
+  color: $black;
+  min-width: fit-content;
+
+
+  &:hover {
+    border: 2px solid $secondary;
+  }
+
+  &:focus {
+    border: 2px solid $secondary;
+  }
+
+}
+
+// html: 適用下拉選單
+// <select id="mounth" class="unified_select">
+// <option value="hide">月</option>
+// <option value="january">1 月</option>
+// <option value="february">2 月</option>
+// <option value="march">3 月</option>
+// <option value="april">4 月</option>
+// </select>
+
+.unified_select {
+  padding: 8px 40px 8px 16px;
+  appearance: none;
+  outline: none;
+  border-radius: 32px;
+  background-color: $white;
+  border: 2px solid $primary;
+  font-size: $fontbase-14;
+  color: $black;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.6483 7.19218C6.47928 7.36115 6.25007 7.45607 6.01108 7.45607C5.77208 7.45607 5.54287 7.36115 5.37385 7.19218L0.275159 2.09349C0.189075 2.01035 0.120411 1.91089 0.0731743 1.80093C0.0259377 1.69097 0.00107397 1.5727 3.40301e-05 1.45302C-0.00100591 1.33335 0.0217989 1.21466 0.0671174 1.1039C0.112436 0.99313 0.179361 0.892497 0.263987 0.807871C0.348613 0.723245 0.449245 0.65632 0.560013 0.611001C0.67078 0.565683 0.789464 0.542878 0.909139 0.543918C1.02881 0.544958 1.14708 0.569822 1.25705 0.617059C1.36701 0.664295 1.46646 0.732958 1.54961 0.819042L6.01108 5.28051L10.4725 0.819042C10.6425 0.654862 10.8702 0.564015 11.1065 0.566069C11.3428 0.568123 11.5689 0.662912 11.736 0.830021C11.9031 0.997131 11.9979 1.22319 12 1.45951C12.002 1.69583 11.9112 1.9235 11.747 2.09349L6.6483 7.19218Z" fill="%23666666"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: right 16px center;
+  min-width: max-content;
+
+  &:hover {
+    border: 2px solid $secondary;
+  }
+
+  &:focus {
+    border: 2px solid $secondary;
+  }
+}
+
+.datalist {
+  padding: 8px 16px 8px 16px;
+  outline: none;
+  border-radius: 32px;
+  background-color: $white;
+  border: 2px solid $primary;
+  font-size: $fontbase-14;
+  color: $black;
+  cursor: pointer;
+  min-width: 250px;
+
+  &:hover {
+    border: 2px solid $secondary;
+  }
+
+  &:focus {
+    border: 2px solid $secondary;
+  }
+}
+
+// html: 適用多行文字輸入框
+// <textarea class="unified_textarea" placeholder="請輸入訊息"></textarea>
+.unified_textarea {
+  resize: vertical;
+  height: 160px;
+  padding: 15px;
+  appearance: none;
+  outline: none;
+  border-radius: 32px;
+  background-color: $white;
+  border: 2px solid $primary;
+  font-size: $fontbase-14;
+  color: $black;
+  min-width: fit-content;
+
+  &:hover {
+    border: 2px solid $secondary;
+  }
+
+  &:focus {
+    border: 2px solid $secondary;
+  }
+}

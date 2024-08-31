@@ -1,0 +1,145 @@
+@import "../base/color";
+@import "../base/font";
+
+@keyframes pagination {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+//範例 html: 頁數切換器
+// <div class="unified_pagination" actpage="1">
+// <a href="#!-1" class="unified_pagination_i">上一頁</a>
+// <a href="#!1" class="unified_pagination_i">1</a>
+// <a href="#!2" class="unified_pagination_i">2</a>
+// <a href="#!3" class="unified_pagination_i">3</a>
+// <a href="#!4" class="unified_pagination_i">4</a>
+// <a href="#!5" class="unified_pagination_i">5</a>
+// <a href="#!6" class="unified_pagination_i">6</a>
+// <a href="#!+1" class="unified_pagination_i">下一頁</a>
+// </div>
+
+// 記得在 html 插入 jquery-3.7.1.min.js 跟 pagination.js
+// <script src="./js/jquery-3.7.1.min.js"></script>
+// <script src="./js/pagination.js"> </script>
+
+.unified_pagination {
+  text-align: center;
+  padding: 20px 0;
+  animation: pagination 500ms ease both;
+
+  &_i {
+    font-size: 14px;
+    transition: background 250ms;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 3px 6px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 38px;
+    line-height: 38px;
+    padding: 0;
+    color: $black;
+    font-weight: 700;
+    letter-spacing: .03em;
+
+    &:first-child,
+    &:last-child {
+      padding: 0 16px;
+      margin: 0 12px 6px;
+    }
+
+    &:last-child,
+    &:nth-child(2),
+    &:nth-last-child(2) {
+      display: inline-block;
+    }
+  }
+
+  &_i:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  &:not([actpage="1"]) &_i:nth-child(1) {
+    display: inline-block;
+  }
+}
+
+@for $i from 1 through 80 {
+  .unified_pagination[actpage="#{$i}"] {
+
+    // 3 before
+    .unified_pagination_i:nth-child(#{$i - 2}):not(:first-child):not(:nth-child(2)) {
+      display: inline-block;
+      pointer-events: none;
+      color: transparent;
+      border-color: transparent;
+      width: 14px;
+
+      &:after {
+        content: '•••';
+        color: $black;
+        font-size: 14px;
+        margin-left: -8px;
+        display: inline-block;
+        letter-spacing: 3px;
+      }
+    }
+
+    // 2 before
+    .unified_pagination_i:nth-child(#{$i - 1}):not(:first-child) {
+      display: inline-block;
+    }
+
+    // before
+    .unified_pagination_i:nth-child(#{$i}):not(:first-child) {
+      display: inline-block;
+    }
+
+    // active
+    .unified_pagination_i:nth-child(#{$i + 1}) {
+      background-color: $primary;
+      color: $black;
+      display: inline-block;
+
+      +.unified_pagination_i:last-child {
+        display: none !important;
+      }
+    }
+
+    // next
+    .unified_pagination_i:nth-child(#{$i + 2}):not(:last-child) {
+      display: inline-block;
+    }
+
+    // 2 next
+    .unified_pagination_i:nth-child(#{$i + 3}):not(:last-child) {
+      display: inline-block;
+    }
+
+    // 3 next
+    .unified_pagination_i:nth-child(#{$i + 4}):not(:last-child):not(:nth-last-child(2)) {
+      display: inline-block;
+      pointer-events: none;
+      color: transparent;
+      border-color: transparent;
+      width: 50px;
+
+      &:after {
+        content: '•••';
+        color: $black;
+        font-size: 14px;
+        margin-left: -8px;
+        display: inline-block;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}

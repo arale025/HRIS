@@ -1,0 +1,36 @@
+@import "../base/color";
+@import "../base/font";
+
+// 範例 html
+// <a href="./shop_list.html"><button class="btn"><span>立即訂購</span><img src="./images/icon_cart.svg" alt="購物車圖示"></button></a>
+
+.btn {
+  display: flex;
+  background-color: $secondary;
+  border-radius: 32px;
+  border: none;
+  min-width: max-content;
+  padding: 10px 10px;
+  cursor: pointer;
+
+  span {
+    color: $white;
+    font-size: $fontbase-14;
+  }
+
+  &:hover {
+    background-color: $primary;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.33);
+  }
+
+  &:hover span {
+    color: $black;
+  }
+
+  img {
+    vertical-align: text-bottom;
+    height: 16px;
+    width: 16px;
+    margin: 0px 4px;
+  }
+}
