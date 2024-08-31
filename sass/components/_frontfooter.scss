@@ -1,0 +1,25 @@
+// HTML 如下，記得插入 scrollTop.js
+
+// <footer class="frontfooter">
+// <botton class="frontfooter_scrolltop" id="scrollTop"><img src="./images/icon_gotop.svg" alt="回到頂端按鈕"></botton>
+// </footer>
+
+// <script src="./js/scrollTop.js"></script>
+
+@import "../base/color";
+@import "../base/font";
+
+.frontfooter {
+
+  &_scrolltop {
+    position: fixed;
+    bottom: 2em;
+    right: 1em;
+    z-index: 998;
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

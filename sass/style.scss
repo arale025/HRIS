@@ -1,0 +1,16 @@
+//html 記得引用  <link rel="stylesheet" href="./css/style.css">
+
+//base
+@import "base/color";
+@import "base/var";
+@import "base/color";
+
+// components
+@import "components/btn";
+@import "components/input";
+@import "components/pagination";
+@import "components/frontfooter";
+
+// layout
+@import "layout/index";
+@import "layout/frontlayout";
