@@ -13,6 +13,11 @@ body {
     linear-gradient(180deg, $gray-300 1px, transparent 1px);
 }
 
+hr {
+  border: 0;
+  border-top: 3px double $secondary;
+}
+
 //字體 -----------
 @font-face {
   font-family: jfopen;

@@ -26,19 +26,79 @@
     </aside>
 
     <main class="main">
-      <div>
+      <div class="namelistdiv">
         <label for="namelist"></label>
         <input class="datalist" list="datalistOptions" id="namelist" placeholder="員工編號/姓名/英文姓名">
         <datalist id="datalistOptions">
-          <option value="E0001">吳小綠/Sky Lin</option>
+          <option value="E0001">吳小綠/Green Wu</option>
           <option value="E0031">林小天/Sky Lin</option>
           <option value="E0798">陳小黑/Black Chen</option>
-          <option value="E1103">余小黃/Yellow Yu</option>
+          <option value="E1103">余小紫/Purple Yu</option>
         </datalist>
       </div>
-      <div id="show">
-
+      <div class="photo_and_general_info_div">
+        <div class="photodiv">
+          <img id="photo" alt="員工照片">
+        </div>
+        <div class="general_info_div">
+          <table class="general_info_table g1" id="generalInfoBasicInfoTable">
+            <tr>
+              <td class="general_info_tabletopic">員工編號</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">中文姓名</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">英文姓名</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">在職狀態</td>
+              <td></td>
+            </tr>
+          </table>
+          <table class="general_info_table g2" id="generalInfoPositionInfoTable">
+            <tr>
+              <td class="general_info_tabletopic">單位</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">職稱</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">職等</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">職銜</td>
+              <td></td>
+            </tr>
+          </table>
+          <table class="general_info_table g3" id="generalInfoDatesInfoTable">
+            <tr>
+              <td class="general_info_tabletopic">到職日期</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">離職日期</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">年資起始日</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="general_info_tabletopic">出生日期</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
       </div>
+
+      <hr class="bookends-dots">
     </main>
   </div>
 

@@ -9,11 +9,6 @@ body {
   background-image: linear-gradient(90deg, #F2F2F2 1px, transparent 1px), linear-gradient(180deg, #F2F2F2 1px, transparent 1px);
 }
 
-hr {
-  border: 0;
-  border-top: 3px double #52A885;
-}
-
 @font-face {
   font-family: jfopen;
   font-display: swap;
@@ -51,6 +46,7 @@ a {
   background-color: #52A885;
   border-radius: 32px;
   border: none;
+  min-width: -moz-max-content;
   min-width: max-content;
   padding: 10px 10px;
   cursor: pointer;
@@ -75,13 +71,16 @@ a {
 
 .unified_input {
   padding: 8px 8px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   border-radius: 32px;
   background-color: #ffffff;
   border: 2px solid #007C7D;
   font-size: 14px;
   color: #000000;
+  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 .unified_input:hover {
@@ -93,7 +92,9 @@ a {
 
 .unified_select {
   padding: 8px 40px 8px 16px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   border-radius: 32px;
   background-color: #ffffff;
@@ -105,6 +106,7 @@ a {
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right 16px center;
+  min-width: -moz-max-content;
   min-width: max-content;
 }
 .unified_select:hover {
@@ -119,30 +121,33 @@ a {
   outline: none;
   border-radius: 32px;
   background-color: #ffffff;
-  border: 2px solid #000000;
+  border: 2px solid #007C7D;
   font-size: 14px;
   color: #000000;
   cursor: pointer;
   min-width: 250px;
 }
 .datalist:hover {
-  border: 2px solid #007C7D;
+  border: 2px solid #52A885;
 }
 .datalist:focus {
-  border: 2px solid #007C7D;
+  border: 2px solid #52A885;
 }
 
 .unified_textarea {
   resize: vertical;
   height: 160px;
   padding: 15px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   border-radius: 32px;
   background-color: #ffffff;
   border: 2px solid #007C7D;
   font-size: 14px;
   color: #000000;
+  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 .unified_textarea:hover {
@@ -4288,130 +4293,15 @@ a {
   cursor: pointer;
 }
 
-.main .namelistdiv {
-  margin-bottom: 20px;
-}
-.main .photodiv {
-  width: 100%;
-  margin: 20px 0px;
-  display: flex;
-  justify-content: center;
-}
-.main .photodiv #photo {
-  height: 120px;
-  width: 120px;
+.main #photo {
+  height: 20%;
+  max-height: 100px;
+  width: 20%;
+  max-width: 100px;
   display: none;
 }
-.main .general_info_div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 20px;
-}
-.main .general_info_div .general_info_table {
-  font-size: 12px;
-  border-spacing: 4px;
-}
-.main .general_info_div .general_info_table td {
-  padding: 4px;
-  border-radius: 8px;
-}
-.main .general_info_div .general_info_table td:first-child {
-  width: 70px;
-}
-.main .general_info_div .general_info_table td:last-child {
-  width: auto;
-}
-.main .general_info_div .general_info_table .general_info_tabletopic {
-  color: #007C7D;
-  font-weight: 900;
-}
-@media screen and (min-width: 375px) {
-  .main .general_info_div .general_info_table {
-    font-size: 14px;
-  }
-  .main .general_info_div .general_info_table td {
-    padding: 8px;
-  }
-  .main .general_info_div .general_info_table td:first-child {
-    width: 90px;
-  }
-  .main .general_info_div .general_info_table td:last-child {
-    width: auto;
-  }
-}
 
-@media screen and (max-width: 576px) {
-  .general_info_table {
-    background-color: #F2F2F2;
-  }
-  .namelistdiv {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 576px) {
-  #photo {
-    position: absolute;
-    right: 14vw;
-    top: 180px;
-  }
-}
-@media screen and (min-width: 720px) {
-  #photo {
-    right: 14vw;
-    top: 100px;
-  }
-}
-@media screen and (min-width: 950px) {
-  .photo_and_general_info_div {
-    display: flex;
-  }
-  .photo_and_general_info_div .photodiv {
-    max-width: 150px;
-  }
-  .photo_and_general_info_div .photodiv #photo {
-    position: static;
-  }
-  .photo_and_general_info_div .general_info_div {
-    max-height: 276px;
-    flex-wrap: wrap;
-    margin: 10px 0px;
-  }
-  .photo_and_general_info_div .general_info_div .general_info_table {
-    margin-left: 30px;
-  }
-  .photo_and_general_info_div .general_info_div .g1 td:first-child {
-    width: 90px;
-  }
-  .photo_and_general_info_div .general_info_div .g1 td:last-child {
-    width: 150px;
-  }
-  .photo_and_general_info_div .general_info_div .g2 td:first-child {
-    width: 90px;
-  }
-  .photo_and_general_info_div .general_info_div .g2 td:last-child {
-    width: 150px;
-  }
-  .photo_and_general_info_div .general_info_div .g3 td:last-child {
-    width: 250px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .photo_and_general_info_div .general_info_div {
-    max-height: 138px;
-  }
-  .photo_and_general_info_div .general_info_div .general_info_table {
-    margin-left: 30px;
-  }
-  .photo_and_general_info_div .general_info_div .g2 td:first-child {
-    width: 60px;
-  }
-}
 .parent_container {
-  min-width: 300px;
   width: 100%;
   margin: 0 auto;
   font-size: 0;
@@ -4426,12 +4316,11 @@ a {
 }
 .parent_container .main {
   width: 100%;
-  min-width: 300px;
   padding: 105px 8vw 15px 8vw;
 }
 @media screen and (min-width: 720px) {
   .parent_container .main {
-    padding: 20px 8vw 0px 200px;
+    padding: 20px 8vw 0px 160px;
   }
 }
 .parent_container .frontaside {
@@ -4467,6 +4356,7 @@ a {
 .parent_container .frontaside_menu a {
   font-size: 20px;
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 8px 4px;
   position: relative;
@@ -4511,7 +4401,9 @@ a {
   float: right;
   padding: 23px 8px;
   position: relative;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .parent_container .frontaside_menuline {
   background: #007C7D;
@@ -4580,6 +4472,4 @@ a {
     max-height: unset;
     height: 1vw;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@
 @import "../base/font";
 
 .parent_container {
+  min-width: 300px;
   width: 100%;
   margin: 0 auto;
   font-size: 0;
@@ -17,11 +18,12 @@
 
   .main {
     width: 100%;
+    min-width: 300px;
     padding: 105px 8vw 15px 8vw;
-    height: 8000px;
+    // height: 8000px;
 
     @media screen and (min-width: 720px) {
-      padding: 20px 8vw 0px 160px;
+      padding: 20px 8vw 0px 200px;
     }
   }
 
