@@ -1,0 +1,181 @@
+@import "../base/color";
+@import "../base/font";
+
+.main {
+
+  .namelistdiv {
+    margin-bottom: 20px;
+  }
+
+  .photodiv {
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+
+    #photo {
+      height: 120px;
+      width: 120px;
+      display: none;
+    }
+  }
+
+  .general_info_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+
+
+    .general_info_table {
+      font-size: 12px;
+      border-spacing: 4px;
+
+      & td {
+        padding: 4px;
+        border-radius: 8px;
+
+        &:first-child {
+          width: 70px;
+        }
+
+        &:last-child {
+          width: auto;
+        }
+      }
+
+      & .general_info_tabletopic {
+        color: $primary;
+        font-weight: 900;
+      }
+    }
+
+    @media screen and (min-width: 375px) {
+      .general_info_table {
+        font-size: $fontbase-14;
+
+        & td {
+          padding: 8px;
+
+          &:first-child {
+            width: 90px;
+          }
+
+          &:last-child {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .general_info_table {
+    background-color: $gray-300;
+  }
+
+  .namelistdiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+  #photo {
+    position: absolute;
+    right: 14vw;
+    top: 180px;
+  }
+
+}
+
+@media screen and (min-width: 720px) {
+
+  #photo {
+    right: 14vw;
+    top: 100px;
+  }
+
+}
+
+@media screen and (min-width: 950px) {
+  .photo_and_general_info_div {
+    display: flex;
+
+    .photodiv {
+      max-width: 150px;
+
+      #photo {
+        position: static;
+      }
+    }
+
+    .general_info_div {
+      max-height: 276px;
+      flex-wrap: wrap;
+      margin: 10px 0px;
+
+      .general_info_table {
+        margin-left: 30px;
+      }
+
+      .g1 {
+        & td {
+          &:first-child {
+            width: 90px;
+          }
+
+          &:last-child {
+            width: 150px;
+          }
+        }
+      }
+
+      .g2 {
+        & td {
+          &:first-child {
+            width: 90px;
+          }
+
+          &:last-child {
+            width: 150px;
+          }
+        }
+      }
+
+      .g3 {
+        & td {
+          &:last-child {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .photo_and_general_info_div {
+
+    .general_info_div {
+      max-height: 138px;
+
+      .general_info_table {
+        margin-left: 30px;
+      }
+
+      .g2 {
+        & td {
+          &:first-child {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}

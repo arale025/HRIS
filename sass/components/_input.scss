@@ -65,18 +65,18 @@
   outline: none;
   border-radius: 32px;
   background-color: $white;
-  border: 2px solid $primary;
+  border: 2px solid $black;
   font-size: $fontbase-14;
   color: $black;
   cursor: pointer;
   min-width: 250px;
 
   &:hover {
-    border: 2px solid $secondary;
+    border: 2px solid $primary;
   }
 
   &:focus {
-    border: 2px solid $secondary;
+    border: 2px solid $primary;
   }
 }
 
