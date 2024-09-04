@@ -33,17 +33,18 @@
   text-align: center;
   padding: 20px 0;
   animation: pagination 500ms ease both;
+  min-width: 250px;
+  margin-top: 20px;
 
   &_i {
-    font-size: 14px;
+    font-size: 12px;
     transition: background 250ms;
     display: inline-block;
     text-transform: uppercase;
-    margin: 0 3px 6px;
-    height: 38px;
-    min-width: 38px;
-    border-radius: 38px;
-    line-height: 38px;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 25px;
+    line-height: 25px;
     padding: 0;
     color: $black;
     font-weight: 700;
@@ -51,8 +52,8 @@
 
     &:first-child,
     &:last-child {
-      padding: 0 16px;
-      margin: 0 12px 6px;
+      padding: 0 0px;
+      margin: 0 0px 6px;
     }
 
     &:last-child,
@@ -69,6 +70,27 @@
 
   &:not([actpage="1"]) &_i:nth-child(1) {
     display: inline-block;
+  }
+
+  @media screen and (min-width: 576px) {
+    .unified_pagination {
+      min-width: unset;
+
+      &_i {
+        font-size: 14px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 38px;
+        line-height: 38px;
+        margin: 0px 5px;
+
+        &:first-child,
+        &:last-child {
+          margin: 0 5px 6px;
+        }
+      }
+
+    }
   }
 }
 
@@ -106,7 +128,7 @@
     // active
     .unified_pagination_i:nth-child(#{$i + 1}) {
       background-color: $primary;
-      color: $black;
+      color: $white;
       display: inline-block;
 
       +.unified_pagination_i:last-child {

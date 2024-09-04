@@ -120,7 +120,7 @@ function update() {
         }
 
         datesTable.querySelector('tr:nth-of-type(1) td:nth-child(2)').textContent = employee.joinDate;
-        datesTable.querySelector('tr:nth-of-type(3) td:nth-child(2)').textContent = adjustedSeniorityStartDate + `（${calculateDateDifference(adjustedSeniorityStartDate, today)}）`;
+        datesTable.querySelector('tr:nth-of-type(3) td:nth-child(2)').textContent = `${calculateDateDifference(adjustedSeniorityStartDate, today)}`;
         datesTable.querySelector('tr:nth-of-type(4) td:nth-child(2)').textContent = employee.birthDate + `（${calculateDateDifference(employee.birthDate, today)}）`;
       }
     } else {

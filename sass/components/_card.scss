@@ -1,0 +1,49 @@
+@import "../base/color";
+@import "../base/font";
+
+// html
+// <div class="card card-X"></div>
+
+.card {
+  background: $white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  padding: 10px 70px 5px 10px;
+  cursor: pointer;
+  margin: 10px 1vw;
+  border: 3px solid $gray-300;
+  border-radius: 20px;
+
+  p {
+    font-size: 12px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+  }
+
+  & img {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    max-height: 120px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    padding: 10px 80px 10px 10px;
+    margin: 10px 2vw;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .card {
+    margin: 10px 10px;
+
+    p {
+      font-size: $font-M-16;
+    }
+  }
+}

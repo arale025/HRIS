@@ -7,10 +7,12 @@
 
 // components
 @import "components/btn";
+@import "components/card";
 @import "components/input";
 @import "components/pagination";
 @import "components/frontfooter";
 
 // layout
-@import "layout/index";
 @import "layout/frontlayout";
+@import "layout/index";
+@import "layout/certificate";
