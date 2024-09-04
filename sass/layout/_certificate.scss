@@ -1,0 +1,58 @@
+@import "../base/color";
+@import "../base/font";
+
+.main {
+
+  fieldset {
+    border: 1px solid $primary;
+    margin-bottom: 20px;
+  }
+
+  .certificate_category {
+    margin: 20px 10px;
+
+    hr {
+      margin: 10px 0px;
+    }
+  }
+
+  .certificate_table_div {
+    overflow-x: auto;
+    max-width: 100%;
+
+    .certificate_table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      table-layout: auto;
+
+      img {
+        cursor: pointer;
+        margin-left: 4px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid $gray-500;
+        text-align: left;
+      }
+
+      thead {
+        background-color: $gray-300;
+        color: $black;
+      }
+
+      tbody {
+        background-color: white;
+      }
+    }
+
+    @media screen and (min-width: 576px) {
+      .certificate_table {
+        font-size: 14px;
+
+      }
+    }
+  }
+}
