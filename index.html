@@ -31,9 +31,9 @@
         <input class="datalist" list="datalistOptions" id="namelist" placeholder="員工編號/姓名/英文姓名">
         <datalist id="datalistOptions">
           <option value="E0001">吳小綠/Green Wu</option>
-          <option value="E0031">林小天/Sky Lin</option>
-          <option value="E0798">陳小黑/Black Chen</option>
-          <option value="E1103">余小紫/Purple Yu</option>
+          <option value="E0002">林小天/Sky Lin</option>
+          <option value="E0003">陳小黑/Black Chen</option>
+          <option value="E0004">余小紫/Purple Yu</option>
         </datalist>
       </div>
       <div class="photo_and_general_info_div">
@@ -98,32 +98,105 @@
         </div>
       </div>
 
-      <hr class="bookends-dots">
+      <hr>
 
       <div class="topic_container">
         <div class="row">
           <div class="col-md-4">
-            <div class="card card-1">
+            <div id="card-1" class="card card-1">
               <p>個人資料</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-2">
-              <p>學歷經歷</p>
+            <div id="card-2" class="card card-2">
+              <p>教育程度</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-3">
-              <p>工作經歷</p>
+            <div id="card-3" class="card card-3">
+              <p>外部經歷</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-4">
-              <p>異動紀錄</p>
+            <div id="card-4" class="card card-4">
+              <p>內部異動</p>
             </div>
           </div>
         </div>
       </div>
+      <div id="personalInfo" class="table-container">
+        <table class="detail_table">
+          <tr>
+            <td>性別</td>
+            <td id="gender"></td>
+          </tr>
+          <tr>
+            <td>婚姻狀況</td>
+            <td id="maritalStatus"></td>
+          </tr>
+          <tr>
+            <td>戶籍地址</td>
+            <td id="residentialAddress"></td>
+          </tr>
+          <tr>
+            <td>通訊地址</td>
+            <td id="mailingAddress"></td>
+          </tr>
+          <tr>
+            <td>行動電話</td>
+            <td id="mobilePhone"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="educationTable" class="table-container">
+        <table class="detail_table">
+          <thead>
+            <tr>
+              <th>學校</th>
+              <th>科系</th>
+              <th>學位</th>
+              <th>畢業年度</th>
+              <th>最高學歷</th>
+            </tr>
+          </thead>
+          <tbody id="educationTableBody">
+          </tbody>
+        </table>
+      </div>
+      <div id="externalExperienceTable" class="table-container">
+        <table class="detail_table">
+          <thead>
+            <tr>
+              <th>任職公司</th>
+              <th>職務</th>
+              <th>開始日</th>
+              <th>結束日</th>
+              <th>年資</th>
+            </tr>
+          </thead>
+          <tbody id="externalExperienceTableBody">
+          </tbody>
+        </table>
+      </div>
+      <div id="internalTransferTable" class="table-container">
+        <table class="detail_table">
+          <thead>
+            <tr>
+              <th>生效日</th>
+              <th>處</th>
+              <th>部</th>
+              <th>區</th>
+              <th>科</th>
+              <th>組</th>
+              <th>職務</th>
+              <th>離職註記</th>
+              <th>管理職狀態</th>
+              <th>年資</th>
+            </tr>
+          </thead>
+          <tbody id="internalTransferTableBody">
+          </tbody>
+        </table>
 
     </main>
   </div>
