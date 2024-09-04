@@ -19,9 +19,9 @@ const employees = {
     mailingAddress: '桃園市中壢區榮安八街39號三樓',
     mobilePhone: '0988019463',
     education: [
-      { school: '國立臺灣大學', major: '家庭教育發展', degree: '碩士', graduationYear: '2007/12/1', highestEducation: 'V' },
-      { school: '國立臺灣大學', major: '金融科技推廣', degree: '學士', graduationYear: '2004/7/1', highestEducation: '' },
-      { school: '國立建國中學', major: '普通', degree: '高中職', graduationYear: '2000/6/1', highestEducation: '' }
+      { school: '國立臺灣大學', major: '家庭教育發展', degree: '碩士', graduationYear: '2007/12', highestEducation: 'V' },
+      { school: '國立臺灣大學', major: '金融科技推廣', degree: '學士', graduationYear: '2004/7', highestEducation: '' },
+      { school: '國立建國中學', major: '普通', degree: '高中職', graduationYear: '2000/6', highestEducation: '' }
     ],
     externalExperience: [
       { company: '大同管理顧問', position: '行政助理', startDate: '2006/7/1', endDate: '2007/2/1' },
@@ -58,8 +58,8 @@ const employees = {
     mailingAddress: "台北市大安區和平東路101號",
     mobilePhone: "0922334455",
     education: [
-      { "school": "國防醫學院", "major": "生物醫學科學", "degree": "碩士", "graduationYear": "2008/1/10", "highestEducation": "V" },
-      { "school": "國防醫學院", "major": "醫學科學", "degree": "學士", "graduationYear": "2006/7/1", "highestEducation": "" }
+      { "school": "國防醫學院", "major": "生物醫學科學", "degree": "碩士", "graduationYear": "2008/1", "highestEducation": "V" },
+      { "school": "國防醫學院", "major": "醫學科學", "degree": "學士", "graduationYear": "2006/7", "highestEducation": "" }
     ],
     "externalExperience": [
       { "company": "健保科技公司", "position": "人力資源經理", "startDate": "2008/5/1", "endDate": "2012/2/1" }
@@ -87,8 +87,8 @@ const employees = {
     mailingAddress: "新北市三峽區大同路20號",
     mobilePhone: "0933445566",
     education: [
-      { "school": "國立中興大學", "major": "企業管理", "degree": "碩士", "graduationYear": "2013/7/1", "highestEducation": "V" },
-      { "school": "國立中興大學", "major": "企業管理", "degree": "學士", "graduationYear": "2011/7/1", "highestEducation": "" }
+      { "school": "國立中興大學", "major": "企業管理", "degree": "碩士", "graduationYear": "2013/7", "highestEducation": "V" },
+      { "school": "國立中興大學", "major": "企業管理", "degree": "學士", "graduationYear": "2011/7", "highestEducation": "" }
     ],
     externalExperience: [
       { "company": "前進科技", "position": "人事專員", "startDate": "2013/8/1", "endDate": "2015/6/1" }
@@ -115,8 +115,8 @@ const employees = {
     mailingAddress: "台中市南區建國北路123號",
     mobilePhone: "0911223344",
     education: [
-      { "school": "國立中興大學", "major": "人力資源管理", "degree": "碩士", "graduationYear": "2016/6/1", "highestEducation": "V" },
-      { "school": "國立中興大學", "major": "人力資源管理", "degree": "學士", "graduationYear": "2014/6/20", "highestEducation": "" }
+      { "school": "國立中興大學", "major": "人力資源管理", "degree": "碩士", "graduationYear": "2016/6", "highestEducation": "V" },
+      { "school": "國立中興大學", "major": "人力資源管理", "degree": "學士", "graduationYear": "2014/6", "highestEducation": "" }
     ],
     externalExperience: [
       { "company": "中興大學職涯中心", "position": "職涯諮詢顧問", "startDate": "2016/6/1", "endDate": "2018/5/29" }
@@ -220,7 +220,7 @@ function update() {
         datesTable.querySelector('tr:nth-of-type(1) td:nth-child(2)').textContent = employee.joinDate;
         datesTable.querySelector('tr:nth-of-type(2) td:nth-child(2)').textContent = employee.leaveDate || '無';
         datesTable.querySelector('tr:nth-of-type(3) td:nth-child(2)').textContent = `${adjustedSeniorityYears}年${adjustedSeniorityMonths}月${adjustedSeniorityDays}天`;
-        datesTable.querySelector('tr:nth-of-type(4) td:nth-child(2)').textContent = `${employee.birthDate}（${calculateDateDifference(employee.birthDate, today).years}年${calculateDateDifference(employee.birthDate, today).months}月${calculateDateDifference(employee.birthDate, today).days}天）`;
+        datesTable.querySelector('tr:nth-of-type(4) td:nth-child(2)').textContent = `${employee.birthDate}（${calculateDateDifference(employee.birthDate, today).years}歲${calculateDateDifference(employee.birthDate, today).months}個月${calculateDateDifference(employee.birthDate, today).days}天）`;
 
         //顯示個人基本資料
         const personalInfoTable = document.getElementById('personalInfo');
