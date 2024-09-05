@@ -13,7 +13,7 @@
   }
 }
 
-//範例 html: 頁數切換器
+//html: 頁數切換器
 // <div class="unified_pagination" actpage="1">
 // <a href="#!-1" class="unified_pagination_i">上一頁</a>
 // <a href="#!1" class="unified_pagination_i">1</a>
@@ -35,6 +35,7 @@
   animation: pagination 500ms ease both;
   min-width: 250px;
   margin-top: 20px;
+  height: 51.5px;
 
   &_i {
     font-size: 12px;
