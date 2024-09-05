@@ -335,3 +335,10 @@ document.getElementById('card-4').addEventListener('click', function () {
 document.getElementById('namelist').addEventListener('input', function () {
   update();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const defaultEmployeeId = 'E0001';
+  const inputElement = document.getElementById('namelist');
+  inputElement.value = defaultEmployeeId;
+  update(); // Trigger the update function to load the default employee information
+});

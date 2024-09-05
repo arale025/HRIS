@@ -228,6 +228,7 @@ a {
   animation: pagination 500ms ease both;
   min-width: 250px;
   margin-top: 20px;
+  height: 51.5px;
 }
 .unified_pagination_i {
   font-size: 12px;
@@ -4630,6 +4631,7 @@ a {
   border-collapse: collapse;
   font-size: 12px;
   table-layout: auto;
+  white-space: nowrap;
 }
 .main .table-container .detail_table th,
 .main .table-container .detail_table td {
