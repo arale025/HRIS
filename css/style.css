@@ -4739,6 +4739,7 @@ a {
   border-collapse: collapse;
   font-size: 12px;
   table-layout: auto;
+  white-space: nowrap;
 }
 .main .certificate_table_div .certificate_table img {
   cursor: pointer;
