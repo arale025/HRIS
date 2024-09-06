@@ -315,19 +315,35 @@ function updateInternalTransfer(internalTransfers) {
 }
 
 // 綁定卡片點擊事件
+
+function clearBorders() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.style.borderColor = '#F2F2F2';
+  });
+}
+
 document.getElementById('card-1').addEventListener('click', function () {
+  clearBorders();
+  this.style.borderColor = '#52A885';
   showTable('personalInfo');
 });
 
 document.getElementById('card-2').addEventListener('click', function () {
+  clearBorders();
+  this.style.borderColor = '#277A9E';
   showTable('educationTable');
 });
 
 document.getElementById('card-3').addEventListener('click', function () {
+  clearBorders();
+  this.style.borderColor = '#ED8C37';
   showTable('externalExperienceTable');
 });
 
 document.getElementById('card-4').addEventListener('click', function () {
+  clearBorders();
+  this.style.borderColor = '#DB7477';
   showTable('internalTransferTable');
 });
 
